@@ -3,21 +3,25 @@ redirect_from:
   - "/ch/13/linear-multiple"
 interact_link: content/ch/13/linear_multiple.ipynb
 kernel_name: python3
+kernel_path: content/ch/13
 has_widgets: true
 title: |-
   Multiple Linear Regression
+pagenum: 59
 prev_page:
   url: /ch/13/linear_grad.html
-  title: |-
-    Fitting the Model
 next_page:
   url: /ch/13/linear_projection.html
-  title: |-
-    A Geometric Perspective
+suffix: .ipynb
+search: x textbf theta boldsymbol our model vector cdot aligned linear f gradient loss predictions mpg car partial using values begin end matrix frac nabla data into columns y descent regression models dataset example prediction thetap xp p n multiple making since attributes numerical ldots above define dimensional function yi simple constant however only horsepower both column thus row actual error l sum bmatrix useful variables take following seems its cars year account takes where looks weve keep table dot product notation index j mpgs result plug below although usually three seven advantage later better get perhaps extend univariate containing single
+
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 
-<div class="jb_cell tag_hide_input">
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Multiple Linear Regression</div>
+</div>
+    <div class="jb_cell tag_hide_input">
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -846,10 +850,10 @@ $$<p>Remember that since $ y_i - \boldsymbol\theta \cdot \textbf{X}_i $ is a sca
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span> 
 
-thetas = minimize(mse_loss, grad_mse_loss, X, y)
-print(f&#39;theta: {thetas} | loss: {mse_loss(thetas, X, y):.2f}&#39;)
+<span class="n">thetas</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">mse_loss</span><span class="p">,</span> <span class="n">grad_mse_loss</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;theta: </span><span class="si">{thetas}</span><span class="s1"> | loss: {mse_loss(thetas, X, y):.2f}&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1111,10 +1115,10 @@ Wall time: 9.22 ms
 
  
  
-<div id="ff2ce854-1dfc-4c98-8465-1b43741a1763"></div>
+<div id="50feaff4-d700-416a-9d33-0eef1fe6771a"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#ff2ce854-1dfc-4c98-8465-1b43741a1763');
+var element = $('#50feaff4-d700-416a-9d33-0eef1fe6771a');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "032e06d7c89545519f1cf4f25432e26a", "version_major": 2, "version_minor": 0}
@@ -1410,10 +1414,10 @@ $$<p>As we include more columns into our data matrix, we extend $ \boldsymbol\th
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span> 
 
-thetas_all = minimize(mse_loss, grad_mse_loss, X, y, progress=10)
-print(f&#39;theta: {thetas_all} | loss: {mse_loss(thetas_all, X, y):.2f}&#39;)
+<span class="n">thetas_all</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">mse_loss</span><span class="p">,</span> <span class="n">grad_mse_loss</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">progress</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;theta: </span><span class="si">{thetas_all}</span><span class="s1"> | loss: {mse_loss(thetas_all, X, y):.2f}&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1591,3 +1595,6 @@ Wall time: 11.7 ms
 
  
 
+
+    </main>
+    

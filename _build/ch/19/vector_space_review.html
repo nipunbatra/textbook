@@ -3,21 +3,25 @@ redirect_from:
   - "/ch/19/vector-space-review"
 interact_link: content/ch/19/vector_space_review.ipynb
 kernel_name: python3
+kernel_path: content/ch/19
 has_widgets: false
 title: |-
   Appendix: Vector Space Review
+pagenum: 88
 prev_page:
   url: /ch/18/hyp_phacking.html
-  title: |-
-    P-Hacking
 next_page:
   url: /ch/20/ref_intro.html
-  title: |-
-    Appendix: Reference Tables
+suffix: .ipynb
+search: vec vectors vector img y v x bmatrix end quad src assets png width begin set length dots between span orthogonal b k space definition z where vp adding lengths direction mathbb r aligned product scaling notations spaces subspaces angles distance projections also terminal any n u sqrt cdot dot theta onto defined notice equal add take step according known triangle method point vdots xn yn dimensional linear c f angle perpendicular pythagorean theorem cos non zero must project closest review vectorspacereviewvectors same scale change its vectorspacereviewscaling different not immediately vice versa place initial vectorspacereviewadding usually represented cartesian coordinates vectorspacereviewnotation
+
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 
-<div class="jb_cell">
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Appendix: Vector Space Review</div>
+</div>
+    <div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -40,22 +44,22 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 <li><a href="#Projections-of-vectors">Projections of vectors</a></li>
 </ul>
 <h3 id="Definition-of-a-vector">Definition of a vector<a class="anchor-link" href="#Definition-of-a-vector"> </a></h3><p>A vector is defined by a length and a direction.</p>
-<p><img src="../../assets/img/vector_space_review__vectors.png" width="500" /></p>
+<p><img src="../../../assets/img/vector_space_review__vectors.png" width="500" /></p>
 <p>Notice that $\vec{x}$ and $\vec{y}$ have the same length and direction. They are equal vectors.</p>
 <h3 id="Scaling-and-adding-vectors">Scaling and adding vectors<a class="anchor-link" href="#Scaling-and-adding-vectors"> </a></h3><p>To scale a vector is to change it's length.</p>
-<p><img src="../../assets/img/vector_space_review__scaling.png" width="500" /></p>
+<p><img src="../../../assets/img/vector_space_review__scaling.png" width="500" /></p>
 <p>Notice that $\vec{2x}$ and $\vec{y}$ have the direction but different lengths. They are not equal.</p>
 <p>To add two vectors $\vec{y} + \vec{z}$, take one step according to the length of $\vec{y}$, then immediately take one step according to the length of $\vec{z}$ (or vice versa). This is also known as triangle method, where you place the initial point of a vector on the terminal point of the other.</p>
-<p><img src="../../assets/img/vector_space_review__adding.png" width="300" /></p>
+<p><img src="../../../assets/img/vector_space_review__adding.png" width="300" /></p>
 <h3 id="Vector-notations">Vector notations<a class="anchor-link" href="#Vector-notations"> </a></h3><p>Vectors are usually represented as Cartesian Coordinates.</p>
-<p><img src="../../assets/img/vector_space_review__notation.png" width="500" /></p>
+<p><img src="../../../assets/img/vector_space_review__notation.png" width="500" /></p>
 $$ \vec{x} = \begin{bmatrix} 1 \\ 4  \end{bmatrix} , \quad 
    \vec{y} = \begin{bmatrix} 3 \\ 2  \end{bmatrix} , \quad 
    \vec{z} = \begin{bmatrix} 4 \\ 0  \end{bmatrix}$$<p>In this notation, arithmetic operations we saw earlier become quite easy.</p>
 $$ \vec{2x} = \begin{bmatrix} 2 \\ 8  \end{bmatrix} , \quad
    \vec{-0.5z} = \begin{bmatrix} -2 \\ 0  \end{bmatrix} , \quad
    \vec{2x + -0.5z} = \begin{bmatrix} 0 \\ 8  \end{bmatrix}
-$$<p><img src="../../assets/img/vector_space_review__notation_arithmetic.png" width="500" /></p>
+$$<p><img src="../../../assets/img/vector_space_review__notation_arithmetic.png" width="500" /></p>
 <p>Vectors can be added and scaled element-wise:</p>
 $$a \vec{x} + b \vec{y} = \begin{bmatrix} a \ x_1 &amp; + &amp; b \  y_1 \\
                                             &amp; \vdots &amp; \\
@@ -68,10 +72,10 @@ $$ \{ c_1 \ \vec{v_1} + c_2 \ \vec{v_2} + \dots + c_p \ \vec{v_p} \ : \ \forall 
 <h3 id="Vector-spaces">Vector spaces<a class="anchor-link" href="#Vector-spaces"> </a></h3><p>A vector space $V$ is the span of a set of vectors $\{\vec{v_1}, \vec{v_2}, \dots, \vec{v_p}\}$, where each $\vec{v_i}$ is a $n \times 1$ dimensional column vector.</p>
 <h3 id="Vector-subspaces">Vector subspaces<a class="anchor-link" href="#Vector-subspaces"> </a></h3><p>A subspace $U$ of $V$ is the span of a set of vectors $\{\vec{u_1}, \dots, \vec{u_q}\}$ where each $\vec{u_i} \in V$. This means every vector in $U$ is also in $V$.</p>
 <h3 id="Angles-between-vectors">Angles between vectors<a class="anchor-link" href="#Angles-between-vectors"> </a></h3><p>When you put any two vectors terminal end to terminal end without changing their direction, you can measure the angle between them.</p>
-<p><img src="../../assets/img/vector_space_review__angle.png" width="300" /></p>
+<p><img src="../../../assets/img/vector_space_review__angle.png" width="300" /></p>
 <h3 id="Vector-lengths">Vector lengths<a class="anchor-link" href="#Vector-lengths"> </a></h3><p>Intuition in $\mathbb{R}^2$ :</p>
 <p>Recall the triangle method of adding two vectors. If we add two perpendicular vectors $\vec{a} + \vec{b}$ in $\mathbb{R}^2$, then we know that the resulting vector will be the hypotenuse. In this case, we also know that the length of $\vec{a} + \vec{b}$ will follow the Pythagorean Theorem: $\sqrt{a^2 + b^2}$.</p>
-<p><img src="../../assets/img/vector_space_review__length.png" width="400" /></p>
+<p><img src="../../../assets/img/vector_space_review__length.png" width="400" /></p>
 <p>General Formula for  Length of $\vec{v} \in \mathbb{R}^n$ :
 $$\begin{aligned} || \vec{v} || \quad
 &amp;=  \quad \sqrt{v_1^2 + v_2^2 + \dots + v_n^2}  \\
@@ -85,13 +89,13 @@ $$ \begin{aligned}
 &amp;= \quad||x|| \ ||y|| \ \cos{\theta}
 \end{aligned}
 $$<p>The first expression is known as the algebraic definition of the dot product, and the second is the geometric definition. Note that the dot product is the inner product defined for vectors in $\mathbb{R}^n$.</p>
-<h3 id="Distance-between-two-vectors">Distance between two vectors<a class="anchor-link" href="#Distance-between-two-vectors"> </a></h3>$$dist(\vec{x},\vec{y}) \quad = \quad || \vec{x} - \vec{y} ||$$<p><img src="../../assets/img/vector_space_review__distance.png" width="500" /></p>
+<h3 id="Distance-between-two-vectors">Distance between two vectors<a class="anchor-link" href="#Distance-between-two-vectors"> </a></h3>$$dist(\vec{x},\vec{y}) \quad = \quad || \vec{x} - \vec{y} ||$$<p><img src="../../../assets/img/vector_space_review__distance.png" width="500" /></p>
 <h3 id="Orthogonal-vectors">Orthogonal vectors<a class="anchor-link" href="#Orthogonal-vectors"> </a></h3><p>For two non-zero vectors to be orthogonal, they must satisfy the property that $\vec{x} \cdot \vec{y} = 0$. Since they have non-zero length, the only way for the two vectors to be orthogonal is if $\cos{\theta} = 0$. One satisfying $\theta$ is 90 degrees, our familiar right angle.</p>
 <h3 id="Projections-of-vectors">Projections of vectors<a class="anchor-link" href="#Projections-of-vectors"> </a></h3><p>To project one vector $\vec{x}$ onto another vector $\vec{y}$, we want to find $k \ \vec{y}$ that is closest to $\vec{x}$.</p>
-<p><img src="../../assets/img/vector_space_review__projection.png" width="400" /></p>
+<p><img src="../../../assets/img/vector_space_review__projection.png" width="400" /></p>
 <p>By the Pythagorean Theorem, we know that $k$ must be the scalar such that $\vec{x} - k \ \vec{y}$ is perpendicular to $\vec{y}$, so  $k \ \vec{y}$ is the (orthogonal) projection of $\vec{x}$ onto $\vec{y}$.</p>
 <p>Likewise, to project one vector $\vec{x}$ onto any vector space spanned by some set of vectors $\{\vec{v_1}, \vec{v_2}, \dots, \vec{v_p}\}$, we still find the linear combination $k_1 \ \vec{v_1} + k_2 \ \vec{v_2} + \dots + k_p \ \vec{v_p}\}$ that is closest to $\vec{x}$.</p>
-<p><img src="../../assets/img/vector_space_review__proj2d.png" width="500" /></p>
+<p><img src="../../../assets/img/vector_space_review__proj2d.png" width="500" /></p>
 
 </div>
 </div>
@@ -100,3 +104,6 @@ $$<p>The first expression is known as the algebraic definition of the dot produc
 
  
 
+
+    </main>
+    

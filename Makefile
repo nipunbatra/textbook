@@ -7,13 +7,12 @@ help:
 	@echo "  clean       to clean out site build files"
 	@echo "  runall      to run all notebooks in-place, capturing outputs with the notebook"
 	@echo "  serve       to serve the repository locally with Jekyll"
-	@echo "  build       to build the site HTML locally with Jekyll and store in _site/"
-	@echo "  ping_binder to force-update the Binder image"
+	@echo "  build       to build the site HTML and store in _site/"
+	@echo "  site 		 to build the site HTML, store in _site/, and serve with Jekyll"
 
 
 install:
-	gem install bundler
-	bundle install
+	jupyter-book install ./
 
 book:
 	jupyter-book build ./
@@ -28,10 +27,8 @@ serve:
 	bundle exec guard
 
 build:
+	jupyter-book build ./ --overwrite
+
+site: build
 	bundle exec jekyll build
 	touch _site/.nojekyll
-
-ping_binder:
-	curl -s https://mybinder.org/build/gh/DS-100/textbook/master |\
-		grep -E '${BINDER_REGEXP}' |\
-		sed -E 's/${BINDER_REGEXP}/\1/' &

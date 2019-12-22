@@ -3,21 +3,25 @@ redirect_from:
   - "/ch/13/linear-grad"
 interact_link: content/ch/13/linear_grad.ipynb
 kernel_name: python3
+kernel_path: content/ch/13
 has_widgets: false
 title: |-
   Fitting the Model
+pagenum: 58
 prev_page:
   url: /ch/13/linear_tips.html
-  title: |-
-    Defining a Simple Linear Model
 next_page:
   url: /ch/13/linear_multiple.html
-  title: |-
-    Multiple Linear Regression
+suffix: .ipynb
+search: theta boldsymbol xi f n gradient descent frac x textbf bmatrix model loss begin yi end our nabla aligned partial linear function sum vector y compute using tip bill l length fit total analytic predict amount table order need choose mean squared error explanatory variable new containing individual also least squares regression correlation simpler computing because solution derivative mse scalar finally define python minimize hat tables around fitting want predicts based optimize note modified reflect addition bills amounts goes name minimizes aside seen before recognize coefficient determine faster specific problem similar constant anyway general purpose method minimization still works later
+
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 
-<div class="jb_cell tag_hide_input">
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Fitting the Model</div>
+</div>
+    <div class="jb_cell tag_hide_input">
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -324,9 +328,9 @@ $$<p>This is a length 2 vector since $ (y_i - f_\boldsymbol\theta (x_i)) $ is sc
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
 
-thetas = minimize(mse_loss, grad_mse_loss, tips[&#39;total_bill&#39;], tips[&#39;tip&#39;])
+<span class="n">thetas</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">mse_loss</span><span class="p">,</span> <span class="n">grad_mse_loss</span><span class="p">,</span> <span class="n">tips</span><span class="p">[</span><span class="s1">&#39;total_bill&#39;</span><span class="p">],</span> <span class="n">tips</span><span class="p">[</span><span class="s1">&#39;tip&#39;</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -429,3 +433,6 @@ $$y = 0.14x + 0.01$$<p>We can use our estimated thetas to make and plot our pred
 
  
 
+
+    </main>
+    
